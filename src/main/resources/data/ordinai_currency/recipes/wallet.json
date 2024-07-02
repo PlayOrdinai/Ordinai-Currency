@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "LLL",
+      "LCL",
+      "LLL"
+    ],
+    "key": {
+      "L": {
+        "item": "minecraft:leather"
+      },
+      "C": {
+        "item": "ordinai_currency:coin"
+      }
+    },
+    "result": {
+      "item": "ordinai_currency:wallet",
+      "count": 1
+    }
+  }
+  

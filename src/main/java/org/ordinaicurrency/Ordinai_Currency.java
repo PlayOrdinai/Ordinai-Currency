@@ -1,4 +1,4 @@
-package org.ordinaicurrency.ordinaicurrency;
+package org.ordinaicurrency;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;

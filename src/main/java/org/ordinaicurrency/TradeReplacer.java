@@ -1,7 +1,6 @@
-package org.ordinaicurrency.ordinaicurrency;
+package org.ordinaicurrency;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.village.TradeOffer;
@@ -25,17 +24,6 @@ public class TradeReplacer {
                 for (int i = 0; i < trades.length; i++) {
                     TradeOffers.Factory oldTrade = trades[i];
                     trades[i] = new TradeOffers.Factory() {
-
-                        public TradeOffer create(Entity entity, Random random) {
-                            TradeOffer oldOffer = oldTrade.create(entity, (net.minecraft.util.math.random.Random) random);
-                            if (oldOffer == null) return null;
-
-                            ItemStack buyA = replaceEmeraldWithCustomCurrency(oldOffer.getOriginalFirstBuyItem());
-                            ItemStack buyB = replaceEmeraldWithCustomCurrency(oldOffer.getSecondBuyItem());
-                            ItemStack sell = oldOffer.getSellItem();
-
-                            return new TradeOffer(buyA, buyB, sell, oldOffer.getUses(), oldOffer.getMaxUses(), oldOffer.getMerchantExperience(), oldOffer.getPriceMultiplier());
-                        }
 
                         @Nullable
                         @Override
